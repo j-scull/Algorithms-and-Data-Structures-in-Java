@@ -24,14 +24,14 @@ public abstract class AbstractTree<E> implements Tree<E>{
 	}
 	
 	/**
-	 * Returns the height pf the subtree rooted at position p
+	 * Returns the height of the subtree rooted at position p
 	 * @param p a position
 	 * @return the height of p
 	 */
 	public int height(Position<E> p) {
 		int h = 0;
 		for (Position<E> c: children(p))
-			h = Math.max(h, height(c));
+			h = Math.max(h, 1 + height(c));
 		return h;
 	}
 	

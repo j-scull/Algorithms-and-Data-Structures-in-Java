@@ -11,10 +11,14 @@ public class TestBinaryTree {
 		Position<Integer> root = T.addRoot(1);
 		Position<Integer> left = T.addLeft(root, 2);
 		Position<Integer> right = T.addRight(root, 3);
+		System.out.println("Height root: " + T.height(root));
+		System.out.println("Height right: " + T.height(right));
 		T.addLeft(left, 4);
 		T.addRight(left, 5);
 		T.addLeft(right, 6);
-		T.addRight(right, 7);
+		System.out.println("Height root: " + T.height(root));
+		System.out.println("Height right: " + T.height(right));
+		
 		
 		System.out.println("\nTesting positions iterable");
 		for (Position<Integer> i: T.positions()) {
@@ -53,6 +57,8 @@ public class TestBinaryTree {
 		for (Position<Integer> i: T.breathFirst()) {
 			System.out.println(i.getElement());
 		}
+		
+		
 	}
 
 }

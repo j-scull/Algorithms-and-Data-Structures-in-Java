@@ -40,7 +40,7 @@ public class TreeMap<K,V> extends AbstractSortedMap<K,V> {
 			((BSTNode<Entry<K,V>>)p).setAux(value);
 		}
 		
-		// Overrider factory function to create BSTNode
+		// Override factory function to create BSTNode
 		@Override
 		protected Node<Entry<K,V>> createNode(Entry<K,V> e, Node<Entry<K,V>> parent, Node<Entry<K,V>> left, Node<Entry<K,V>> right){
 			return new BSTNode<>(e ,parent, left, right);
