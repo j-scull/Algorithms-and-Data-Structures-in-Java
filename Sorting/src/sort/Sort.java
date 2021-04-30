@@ -88,8 +88,8 @@ public class Sort<K> {
 			if (left <= right) {
 				temp = S[left];
 				S[left] = S[right];
-				S[right] = S[left];
-				left++; right++;
+				S[right] = temp;
+				left++; right--;
 			}
 		}
 		// Put the pivot between the left and right sub-arrays
